@@ -1,21 +1,23 @@
-<div>hello</div>
-<nav>
-  <ul>
-    <li><a  routerLink="/home" routerLinkActive="active">First component</a></li>
-  </ul>
-</nav>
 
+<div class="box">
+  <label form="color">choose a color</label>
 
-
-
-
-
-
-
-
-
-
-
-
+    <select id="coloridselect" appColors [(ngModel)]="color">
+      <option name="colors" value="pink">pink</option>
+      <option name="colors" value="yellow">yellow</option>
+      <option name="colors" value="red">red</option>
+      <option name="colors" value="green">green</option>
+      <option name="colors" value="orange">orange</option>
+    </select>
+  
+  <div class="colorbox" id="colorid" appColors [selectedColor]="color">color</div>
+{{color}}
+</div>
 
 <router-outlet></router-outlet>
+
+<app-name-editor></app-name-editor>
+<app-nav-bar></app-nav-bar>
+<app-contactus></app-contactus>
+
+

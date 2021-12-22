@@ -11,24 +11,21 @@
             <li class="nav-item">
                 <a class="nav-link " routerLink="/ContactUs" routerLinkActive="active">ContactUs</a>
             </li>
-
-            <div>
-
-                <ul class="nav navbar-nav">
-                    <li *ngIf="!loggedin()" class="nav-item">
-                        <a class="nav-link " routerLink="/CreateAccount" routerLinkActive="active">CreateAccount</a>
-                    </li>
-                    <li *ngIf="!loggedin()" class="nav-item">
-                        <a class="nav-link " routerLink="/Login" routerLinkActive="active">Login</a>
-                    </li>
-                    <li *ngIf="loggedin" class="nav-item">
-                        <a class="nav-link " (click)="onLogout()">Logout</a>
-                    </li>
-                </ul>
-            </div>
+        
+        
+            <li *ngIf="!loggedin()" class="nav-item">
+                <a class="nav-link " routerLink="/CreateAccount" routerLinkActive="active">CreateAccount</a>
+            </li>
+        </ul>
+            <ul class="nav navbar-nav">
+            <li *ngIf="!loggedin()" class="nav-item">
+                <a class="nav-link " routerLink="/Login" routerLinkActive="active">Login</a>
+            </li>
+            <li *ngIf="!loggedin()" class="nav-item">
+                <a class="nav-link " (click)="onLogout()">Logout</a>
+            </li>
+            
         </ul>
     </div>
-
-
 
 </nav>
